@@ -1,0 +1,99 @@
+@import "bourbon"
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.header-phone
+		font-size: 14px
+		border: none
+		margin-top: 2px
+	#cart
+		button
+			font-size: 15px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	#search
+		margin: 10px 0 0 0
+	.top-menu
+		.navbar
+			margin-left: 0
+	.cart-wrapper
+		padding-left: 15px
+	.top-menu 
+		.cart-wrapper 
+			.dropdown-menu
+				width: 100%
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.product-layout 
+		h4 
+			margin-bottom: 0
+			a
+				font-size: 18px
+		.price
+			margin-top: 0	
+			font-size: 19px
+		button, .button
+			font-size: 17px
+			&.toclick
+				font-size: 15px
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	#content .swiper-viewport
+		display: none
+	.product-layout 
+		h4 
+			margin-bottom: 0
+			a
+				font-size: 17px
+		.price
+			margin-top: 0
+			font-size: 17px
+		button, .button
+			font-size: 14px
+			&.toclick
+				font-size: 13px
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	.search
+		padding-right: 0
+	.dropdown-menu
+		left: -15px
+		font-size: 16px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
