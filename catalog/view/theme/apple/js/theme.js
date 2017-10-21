@@ -9,6 +9,10 @@ $(function() {
 		});
 	});
 
+	/*$('.first_adv').mouseenter(function() {
+		$('.first_adv p').css('color','#fff');
+	});*/
+
 	$('.product-thumb h4').css('height', '').equalHeights();
 	$('.product-thumb .price').css('height', '').equalHeights();
 
