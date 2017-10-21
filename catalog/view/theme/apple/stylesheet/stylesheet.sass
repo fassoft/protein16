@@ -36,18 +36,23 @@
 		line-height: 1.5
 		display: inline-block
 		width: 85%
+		color: #fff
+		//transition: color 0.25s ease
 
 .first_adv
+	background-color: $accent2
+	transition: all 0.25s ease
+	&:hover
+		background-color: lighten($accent2, 7%)
+		//color: #000
+		//>.adv-wrapper p
+		//	color: #000
+
+.second_adv
 	background-color: $accent
 	transition: all 0.35s ease
 	&:hover
 		background-color: lighten($accent, 7%)
-
-.second_adv
-	background-color: $accent2
-	transition: all 0.35s ease
-	&:hover
-		background-color: lighten($accent2, 7%)
 
 .third_adv
 	background-color: lighten($grey, 10%)
@@ -238,14 +243,14 @@ header
 			color: #ededed
 			bottom: 1px transparent solid
 			top: 1px transparent solid
-		border-left: 2px #ededed solid
-		border-right: 2px #ededed solid
+		border-left: 2px #ddd solid
+		border-right: 2px #ddd solid
 		&:first-child
 			border-radius: 0
-			border-top: 2px #ededed solid
+			border-top: 2px #ddd solid
 		&:last-child
 			border-radius: 0
-			border-bottom: 2px #ededed solid
+			border-bottom: 2px #ccc solid
 		transition: all .2s ease
 		&:hover, &:active, &:focus
 			background-color: $accent
