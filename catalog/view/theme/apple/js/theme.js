@@ -16,4 +16,28 @@ $(function() {
 	$('.product-thumb h4').css('height', '').equalHeights();
 	$('.product-thumb .price').css('height', '').equalHeights();
 
+	$('.toclick, .callback').magnificPopup({
+		mainClass: 'mfp-zoom-in',
+		removalDelay: '500'
+	});
+
+	$(".ajax-form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "catalog/view/theme/apple/mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			var pp_suc = th.closest('.product-popup').find('.success');
+			pp_suc.fadeIn();
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+				pp_suc.fadeOut();
+				$.magnificPopup.close();
+			}, 1250);
+		});
+		return false;
+	});
+
 });

@@ -1,7 +1,7 @@
 @import "bourbon"
 @import "vars"
 @import "fonts"
-
+@import "catalog/view/theme/apple/stylesheet/mfp-zoom-in"
 //Custom styles here
 .first_adv_link
 	&:hover, &:focus, &:active
@@ -346,6 +346,8 @@ header
 		.fa
 			display: none
 
+
+
 .alert
 	border-radius: 0
 	background-color: lighten($grey, 10%)
@@ -436,12 +438,78 @@ header
 			border-bottom: none
 
 .product-popup
-	display: none
-	background-color: #fff
-	min-width: 320px
+	background-color: $grey
+	max-width: 320px
 	position: relative
 	margin: auto
 	padding: 15px
+	color: #fff
+	h2
+		margin-top: 15px
+		margin-bottom: 20px
+		font-size: 28px
+		text-align: center
+		font-family: MyriadSetProThin, sans-serif
+		color: $accent
+	p
+		text-align: center
+		margin-bottom: 10px
+		font-size: 16px
+	.form-control-cnt
+		position: relative
+		margin-bottom: 15px
+	.form-control
+		//padding:  16px
+		//margin-bottom: 5px
+		height: 35px
+		color: #bbb
+		border: 0
+			radius: 0
+		background-color: #444	
+		font:
+			style: italic
+			size: 	16px
+		transition: background-color .25s ease, box-shadow .25s ease, color .25s ease
+		box-shadow: transparent 0 0 0 1px inset
+		&:focus, &:hover, &:visited
+			background-color: #222
+			box-shadow: $accent 0 0 0 1px inset
+			color: $accent
+	.btn-primary
+		width: 100px
+		text-align: center
+		height: 35px
+		position: absolute
+		top: 0
+		right: 0
+		border: none
+			radius: 0
+		background-color: $accent
+		color: #fff
+		font:
+			size: 18px
+		transition: background-color .25s ease
+		&:hover, &:focus
+			background-color: lighten($accent, 7%)
+	.success
+		text-align: center
+		font-size: 22px
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: $grey
+		text-transform: uppercase
+		padding: 55% 10% 10%
+		color: #ddd
+		display: none
+
+
+.callback-form
+	.success
+		padding-top: 28%
+
 
 .fassoft
 	img

@@ -7,7 +7,7 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #0b0b0b;
+  background: #4b4b4b;
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
@@ -140,7 +140,9 @@ button::-moz-focus-inner {
     top: 1px; }
 
 .mfp-close-btn-in .mfp-close {
-  color: #333333; }
+  color: #ccc;
+  width: 55px;
+  float: right; }
 
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
   color: white;
