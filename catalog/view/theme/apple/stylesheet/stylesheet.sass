@@ -3,6 +3,9 @@
 @import "fonts"
 @import "catalog/view/theme/apple/stylesheet/mfp-zoom-in"
 //Custom styles here
+input:-webkit-autofill
+	color: #2a2a2a !important;
+
 .first_adv_link
 	&:hover, &:focus, &:active
 		text-decoration: none
@@ -321,14 +324,6 @@ header
 	button, .button
 		> span
 			display: inline!important
-		&.toclick
-			font-size: 16px
-			background-color: lighten($grey, 70%)
-			color: $grey
-			font-size: 16px
-			padding: 11px 0
-			&:hover, &:focus
-				background-color: lighten($grey, 60%)
 		border: none
 		background-color: $accent
 		color: #fff
@@ -345,6 +340,59 @@ header
 			background-color: darken($accent, 7%)
 		.fa
 			display: none
+
+		&.toclick
+			overflow: hidden
+			position: relative
+			background-color: #fff
+			border: $accent 1px solid
+			padding: 11px 0
+			transition: border .22s ease-in-out
+			cursor: pointer
+			a
+				font-size: 17px
+				color: $grey
+				text-decoration: none
+				z-index: 2
+				position: relative
+				transition: color .22s ease-in-out
+			.pytin
+				background-color: $accent2
+				z-index: 1
+				height: 0
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+			&:hover
+				background-color: #fff
+				border: darken($accent2, 8%) 1px solid
+				.pytin
+					animation: turning .22s  ease-in-out 0s 1 normal forwards
+				a
+					color: #fff
+				
+
+
+
+
+@keyframes turning
+	0% 
+	    height: 0
+	    border: $accent2 1px solid
+	25% 
+	    height: 25%
+	    border: $accent2 1px solid
+	50% 
+	    height: 50%
+	    border: $accent2 1px solid
+	75% 
+	    height: 75%
+	    border: $accent2 1px solid
+	100% 
+	    height: 100%
+	    border: darken($accent2, 8%) 1px solid
+	    box-shadow: 0 7px 16px 5px darken($accent2, 8%) inset; 
 
 
 
@@ -437,6 +485,36 @@ header
 			color: lighten($accent, 10%)
 			border-bottom: none
 
+.mfp-content
+	.product-popup
+		display: block
+		h2
+			margin-top: 25px
+		.price-tax, .price-old
+			display: none
+	.pp-img-wrap
+		text-align: center
+		img
+			max-width: 100%
+			width: 100%
+	.pp-content
+		h3
+			text-align: center
+			font-family: MyriadSetProThin, sans-serif
+			margin: 20px 0 8px
+		p
+			font-size: 21px
+			color: $accent
+			margin: 0 0 20px
+		.form-control-cnt
+			position: relative
+		.form-control
+			margin-bottom: 15px
+	p
+		text-align: center
+
+
+
 .product-popup
 	background-color: $grey
 	max-width: 320px
@@ -444,6 +522,7 @@ header
 	margin: auto
 	padding: 15px
 	color: #fff
+	display: none
 	h2
 		margin-top: 15px
 		margin-bottom: 20px
@@ -501,7 +580,7 @@ header
 		bottom: 0
 		background-color: $grey
 		text-transform: uppercase
-		padding: 55% 10% 10%
+		padding: 80% 10% 10%
 		color: #ddd
 		display: none
 

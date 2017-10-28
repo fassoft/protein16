@@ -1,69 +1,21 @@
-animated-button:link, animated-button:visited {
-	position: relative;
-	display: block;
-	/*margin: 30px auto 0;
-	padding: 14px 15px;*/
-	color: #fff;
-	overflow: hidden;
-	letter-spacing: .08em;
-	border-radius: 0;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
-}
-animated-button:link:after, animated-button:visited:after {
-	content: "";
-	position: absolute;
-	height: 0%;
-	left: 50%;
-	top: 50%;
-	width: 150%;
-	z-index: -1;
-	-webkit-transition: all 0.75s ease 0s;
-	-moz-transition: all 0.75s ease 0s;
-	-o-transition: all 0.75s ease 0s;
-	transition: all 0.75s ease 0s;
-}
-animated-button:link:hover, animated-button:visited:hover {
-	color: #FFF;
-	text-shadow: none;
-}
-animated-button:link:hover:after, animated-button:visited:hover:after {
-	height: 450%;
-}
-animated-button:link, animated-button:visited {
-	position: relative;
-	display: block;
-	/*margin: 30px auto 0;
-	padding: 14px 15px;*/
-	border-radius: 0;
-	overflow: hidden;
-	letter-spacing: .08em;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
+@keyframes turning {
+    0% {
+        height: 0;
+    }
+    25% {
+        height: 25%;
+    }
+    50% {
+        height: 50%;
+    }
+    75% {
+        height: 75%;
+    }
+    100% {
+        height: 100%;
+    }
 }
 
-/* Victoria Buttons */
-
-a.animated-button.sandy-four {
-	border: 2px solid #AEA8D3;
-	color: #FFF;
-}
-a.animated-button.sandy-four:after {
-	border: 3px solid #AEA8D3;
-	opacity: 0;
-	-moz-transform: translateY(-50%) translateX(-50%) rotate(25deg);
-	-ms-transform: translateY(-50%) translateX(-50%) rotate(25deg);
-	-webkit-transform: translateY(-50%) translateX(-50%) rotate(25deg);
-	transform: translateY(-50%) translateX(-50%) rotate(25deg);
-}
-a.animated-button.sandy-four:hover:after {
-	height: 400% !important;
-	opacity: 1;
-	color: #FFF;
+.pytin:hover{
+    animation: turning 1s ease-out 0.1s infinite alternate;
 }

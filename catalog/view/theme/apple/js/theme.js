@@ -3,7 +3,38 @@ $(function() {
 //кнопка "купить в один клик"
 	$('.product-layout > .product-thumb').each(function(e) {
 		e +=1;
-		$(this).find('.button-group').append('<a class="button toclick" href="#pp-item-'+ e +' ">Купить в один клик</a>');
+
+		var img_url = $(this).find('.img-responsive').attr('src'),
+				item_name = $(this).find('h4 a').text(),
+				item_price = $(this).find('.price').html(),
+				admin = $('#callback [name=admin_email]').val();
+
+		$(this).after('\
+		<div id="pp-item-' + e + '" class="product-popup">\
+			<h2>Купить в один клик</h2>\
+			<div class="pp-img-wrap"><img src="' + img_url + '" alt="Протеин16"></div>\
+			<div class="pp-content">\
+				<h3>' + item_name + '</h3>\
+				<p>' + item_price + '</p>\
+				<form class="ajax-form">\
+					<input type="hidden" name="project_name" value="Protein16">\
+	        <input type="hidden" name="admin_email" value="' + admin + '">\
+	        <input type="hidden" name="form_subject" value="Заявка с сайта Protein16">\
+	        <input type="hidden" name="Продукт" value="' + item_name + '">\
+					<div class="form-control-cnt">\
+	        <input class="form-control" type="text" name="Телефон" placeholder="Введите ваш телефон..." required>\
+	        <button class="btn btn-primary">Заказать</button>\
+					</div>\
+				</form>\
+				<div class="success">Спасибо за заявку!</div>\
+			</div>\
+		</div>');
+
+		$(this).find('.button-group').append('<div class="button toclick" href="#pp-item-'+ e +' ">\
+			<a>Купить в один клик</a>\
+			<div class="pytin"></div>\
+			</div>\
+			');
 		$(this).parent().attr({
 			"class" : "product-layout col-lg-4 col-md-4 col-sm-6 col-xs-6"
 		});
