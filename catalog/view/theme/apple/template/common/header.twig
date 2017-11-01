@@ -26,6 +26,7 @@
   {% endfor %}
   <link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" rel="stylesheet">
   <link href="catalog/view/theme/apple/stylesheet/stylesheet.css" rel="stylesheet">
+  <link href="catalog/view/theme/apple/libs/animate/animate.min.css" rel="stylesheet">
   {% for script in scripts %}
   <script src="{{ script }}" type="text/javascript"></script>
   {% endfor %}
@@ -35,6 +36,7 @@
   {% endfor %}
   <script src="catalog/view/theme/apple/js/theme.js"></script>
   <script src="catalog/view/theme/apple/libs/equalheights/equalheights.js"></script>
+  <script src="catalog/view/theme/apple/libs/animate/animate-css.js"></script>
   <script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
   {% for analytic in analytics %}
   {{ analytic }}
@@ -77,11 +79,11 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-9 cart-wrapper">
-        <nav id="menu" class="navbar">
+        <nav id="menu" class="navbar navbar-top">
           <div class="navbar-header"><span class="toggle-top-text hidden-lg hidden-md hidden-sm">Меню</span>
             <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
           </div>
-          <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <div class="collapse navbar-collapse navbar-ex1-collapse navbar-top">
             {% if informations %}
               <ul class="nav navbar-nav">
                 {% for information in informations %}
