@@ -9,11 +9,13 @@ input:-webkit-autofill
 .advantage
 	position: relative
 	margin-bottom: 20px
+	cursor: pointer
 	p
-		line-height: 1.4
+		line-height: 1.5
 		color: #fff
 		font-family: MyriadSetProText, sans-serif	
 		font-size: 17px
+		margin: 0
 	.p-cont
 		position: relative
 		top: 0
@@ -68,16 +70,16 @@ input:-webkit-autofill
 			margin-top: 3px
 
 
-
-
 .adv
 	background-color: $accent2
+	&:hover
+		background-color: lighten($accent2, 5%)
 
 .second_adv
 	background-color: $accent
 	transition: all 0.35s ease
 	&:hover
-		background-color: lighten($accent, 7%)
+		background-color: lighten($accent, 5%)
 
 .third_adv
 	background-color: lighten($grey, 10%)
@@ -152,6 +154,7 @@ header
 		border: 0
 			radius: 0
 		background-color: #444	
+		color: #999
 		font:
 			style: italic
 			size: 	15px
@@ -299,7 +302,7 @@ header
 			font-family: MyriadSetProThin, sans-serif
 			margin-top: 20px
 
-.product-layout
+.product-layout, .col-xs-6
 	>.product-thumb
 		border: transparent 
 		transition: box-shadow .25s ease
@@ -573,7 +576,7 @@ header
 		//padding:  16px
 		//margin-bottom: 5px
 		height: 35px
-		color: #bbb
+		color: #999
 		border: 0
 			radius: 0
 		background-color: #444	
@@ -646,19 +649,35 @@ header
 		margin-bottom: 20px
 		font-family: MyriadSetProThin, sans-serif
 
-/*.input-group .form-control:last-child, .input-group-addon:first-child
+.product-count
+	padding-left: 0
+	margin-top: -55px
+
+.input-group .form-control:last-child, .input-group-addon:first-child
 	border-radius: 0
 
 label.input-group-addon
-	background-color: $accent
+	background-color: $accent2
 	color: #fff
 	border: none
 
 select.form-control
-	background-color: #666
-	border: none
-	color: #fff 
+	background-color: #fff
+	border: $accent2 1px solid
+	color: $accent2
 
+
+ul.pagination
+	li
+		&.active span
+			background-color: $accent2
+			border: none
+		a
+			color: $accent2
+			&:hover
+				color: $accent2
+		&:first-child span, &:last-child a, &:first-child a, &:last-child span
+			border-radius: 0
 
 /*[data-original-title], #compare-total, [for='input-limit'], #input-limit
 	display: none*/

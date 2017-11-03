@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
 //кнопка "купить в один клик"
 $('.product-layout > .product-thumb').each(function(e) {
@@ -122,5 +122,8 @@ $('.product-layout > .product-thumb').each(function(e) {
 		$('.third_adv').addClass("zoomInLeft");
 	});
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+if ($(document).height() <= $(window).height())
+  $(".main-footer").addClass("navbar-fixed-bottom");
 
 });

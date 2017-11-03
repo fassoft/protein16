@@ -41,7 +41,7 @@ $_['entry_bad']                = 'Плохо';
 
 // Tabs
 $_['tab_description']          = 'Описание';
-$_['tab_attribute']            = 'Характеристики';
+$_['tab_attribute']            = 'Пищевая ценность';
 $_['tab_review']               = 'Отзывов (%s)';
 
 // Error
