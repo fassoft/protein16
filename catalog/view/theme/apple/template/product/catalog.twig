@@ -1,0 +1,34 @@
+{{ header }}
+
+<div class="row">{{ column_left }}
+	{% if column_left and column_right %}
+	{% set class = 'col-sm-6' %}
+	{% elseif column_left or column_right %}
+	{% set class = 'col-sm-9' %}
+	{% else %}
+	{% set class = 'col-sm-12' %}
+	{% endif %}
+	<div id="content" class="{{ class }}">{{ content_top }}
+		<h1>Каталог продукции</h1>
+
+		<div id="catalog">
+			
+			{% for catalogi in catalog %}
+			<div>
+				<div class="image"><a href="{{ catalogi.href }}"><img src="{{ catalogi.image }}" alt="{{ catalogi.name }}" border="1" title="{{ catalogi.name }}" /></a></div>
+				<div class="catalog-name"><a href="{{ catalogi.href }}">{{ catalogi.name }}</a></div>
+				<div class="children">
+					<div class="catalog-name"><a href="{{ catalogi.href }}">{{ catalogi.name }}</a></div><BR>
+					{% for childrens in catalogi %}	  
+					<div class="name"><a href="{{ childrens.href }}">{{ childrens.name }}</a></div>	  
+					{% endfor %}
+
+				</div>	  
+			</div>
+			{% endfor %}
+		</div>
+	{{ content_bottom }}</div>
+{{ column_right }}</div>
+</div>
+
+{{ footer }} 

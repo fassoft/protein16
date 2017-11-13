@@ -23,6 +23,8 @@
 					}
 				}
 				$data['contact'] = $this->url->link('information/contact');
+				$data['catalog'] = $this->url->link('product/catalog');
+				$data['category'] = $this->url->link('product/category');
 			]]></add>
 		</operation>
 	</file>  

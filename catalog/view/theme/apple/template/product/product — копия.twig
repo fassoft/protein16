@@ -180,9 +180,9 @@
                   {% endif %}
                   <div class="form-group">
                     <label class="control-label" for="input-quantity">{{ entry_qty }}</label>
-                    <br>
-                    <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control product_count" />
+                    <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control" />
                     <input type="hidden" name="product_id" value="{{ product_id }}" />
+                    <br />
                     <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
                   </div>
                   {% if minimum > 1 %}
@@ -216,9 +216,9 @@
 
             <div class="{{ class }}">
                  {% if thumb or images %}
-                 <ul class="thumbnails thumb-cnt">
+                 <ul class="thumbnails">
                   {% if thumb %}
-                  <a class="thumbnail" href="{{ popup }}" title="{{ heading_title }}"><img src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a>
+                  <li><a class="thumbnail" href="{{ popup }}" title="{{ heading_title }}"><img src="{{ thumb }}" title="{{ heading_title }}" alt="{{ heading_title }}" /></a></li>
                   {% endif %}
                   {% if images %}
                   {% for image in images %}
@@ -227,13 +227,6 @@
                   {% endif %}
                 </ul>
                 {% endif %}
-                
-
-              
-
-              </div>
-
-                <div class="col-sm-12">
                 <ul class="nav nav-tabs">
                   <li class="active"><a href="#tab-description" data-toggle="tab">{{ tab_description }}</a></li>
                   {% if attribute_groups %}
@@ -243,8 +236,6 @@
                   <li><a href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>
                   {% endif %}
                 </ul>
-
-
                 <div class="tab-content">
                   <div class="tab-pane active" id="tab-description">{{ description }}</div>
                   {% if attribute_groups %}
@@ -269,7 +260,6 @@
                   </div>
                   {% endif %}
                   {% if review_status %}
-
                   <div class="tab-pane" id="tab-review">
                     <form class="form-horizontal" id="form-review">
                       <div id="review"></div>
@@ -314,10 +304,7 @@
                       {% endif %}
                     </form>
                   </div>
-
-                {% endif %}
-              </div>
-            
+                {% endif %}</div>
               </div>
 </div>
 
@@ -572,14 +559,6 @@
           delegate: 'a',
           gallery: {
            enabled: true
-         },
-         mainClass: 'mfp-with-zoom mfp-img-mobile',
-         zoom: {
-          enabled: true,
-          duraion: 300,
-          opener: function(element){
-            return element.find('img');
-          }
          }
        });
        });

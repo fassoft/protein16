@@ -543,7 +543,8 @@ header
 			margin-bottom: 15px
 	p
 		text-align: center
-
+	.mfp-img
+		background-color: #fff
 
 
 .product-popup
@@ -679,8 +680,95 @@ ul.pagination
 		&:first-child span, &:last-child a, &:first-child a, &:last-child span
 			border-radius: 0
 
+.egg
+	width: 20px
+	height: 20px
+	position: relative
+	img
+		position: absolute
+		bottom: -60px
+		right: -150px
+		z-index: -1
+.egg-img-a
+	display: block
+	animation: egg .25s  ease-in-out 0s 1 normal forwards
+.egg-img-out
+	animation: egg-out .25s  ease 0s 1 normal forwards
+
+@keyframes egg
+	0% 
+	    bottom: -60px
+	80%
+			z-index: -1  
+	100% 
+	    bottom: 50px
+	    z-index: 25
+@keyframes egg-out
+	0% 
+	    bottom: 50px
+	80%
+			z-index: -1    
+	100% 
+	    bottom: -60px
+	    
+
+.search-fixed-bottom
+	margin-bottom: 331px
 /*[data-original-title], #compare-total, [for='input-limit'], #input-limit
 	display: none*/
+
+.list-unstyled
+	h2
+		color: $accent
+	li
+		a
+			color: $accent2
+.form-group
+	select.form-control
+		color: lighten($grey, 10%)
+		border-radius: 0
+		border-color: lighten($grey, 60%)
+		font-size: 15px
+	input.product_count
+		width: 22%
+		height: 40px
+		font-size: 17px
+		float: left
+		text-align: center
+		border-radius: 0
+		&:hover, &:focus
+			border-color: $accent
+	button.btn-primary
+		margin-bottom: 20px
+		border: none
+		background-color: $accent
+		color: #fff
+		width: 70%
+		float: right
+		padding: 7px 0
+		font-size: 18px
+		font-family: MyriadSetProText, sans-serif
+		transition: background-color .25s ease
+		outline: none
+		border-radius: 0
+		&:hover, &:focus
+			background-color: darken($accent, 7%)
+			text-decoration: none
+		&:active
+			background-color: darken($accent, 7%)
+
+.thumb-cnt
+	clear: both
+	padding-left: 10px
+	a
+		border-radius: 0
+		&:hover, &:focus, &:active
+			border-color: $accent
+
+.nav-tabs
+	li
+		a
+			color: $grey
 
 @import "media" 
 
