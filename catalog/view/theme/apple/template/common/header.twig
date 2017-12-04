@@ -84,18 +84,23 @@
             <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
           </div>
           <div class="collapse navbar-collapse navbar-ex1-collapse navbar-top">
-            {% if informations %}
+            
               <ul class="nav navbar-nav">
-                <li><a href="{{ home }}">Главная</a></li>
-                <li><a href="{{ catalog }}">Каталог</a></li>
-                <li><a href="{{ category }}">Катeujhbz</a></li>
-                {% for information in informations %}
-                <li><a href="{{ information.href }}">{{ information.title }}</a></li>
-                {% endfor %}
+                <li ><a href="{{ home }}">Главная</a></li>
+                 <li class='article_cont'><a href="#">Статьи</a> 
+                      {% if informations %}
+                      <ul class="article hidden">
+                          {% for information in informations %}
+                          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+                          {% endfor %}
+                      </ul>
+                      {% endif %}
+                </li>
                 <li><a href="/sale">Акции</a></li>
                 <li><a href="{{ contact }}">Контакты</a></li>
+
               </ul>
-            {% endif %}
+            
           </div>
         </nav>
 

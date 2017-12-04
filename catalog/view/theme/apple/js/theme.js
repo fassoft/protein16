@@ -142,5 +142,16 @@ $('.egg').click(function() {
 /*if ($(document).height() <= $(window).height()){
   $(".main-footer").addClass("navbar-fixed-bottom");
 };*/
+$('.article_cont').hover(function() {
+	setTimeout(function() {
+				$('.article').removeClass('hidden');
+			}, 100);
+});
+
+$('.article_cont').mouseleave(function() {
+	setTimeout(function() {
+		$('.article').addClass('hidden');
+		}, 100);
+});
 
 });

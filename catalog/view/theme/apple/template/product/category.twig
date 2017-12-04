@@ -44,7 +44,7 @@
       {% if products %}
 
 
-     <!-- <div class="row">
+     <div class="row">
         <div class="col-md-4 col-sm-4">
 
         </div>
@@ -89,7 +89,7 @@
 
 
 
-      </div>-->
+      </div>
 
       <div class="row"> {% for product in products %}
         <div class="product-layout product-list col-xs-12">
@@ -119,10 +119,10 @@
             </div>
           </div>
         {% endfor %} </div>
-        <!--<div class="row">
+        <div class="row">
           <div class="col-sm-6 text-left">{{ pagination }}</div>
           <div class="col-sm-6 text-right">{{ results }}</div>
-        </div>-->
+        </div>
         {% endif %}
         {% if not categories and not products %}
         <p>{{ text_empty }}</p>
