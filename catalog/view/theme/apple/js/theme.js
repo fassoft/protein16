@@ -72,7 +72,7 @@ $('.product-layout > .product-thumb').each(function(e) {
 		return false;
 	});
 
-
+//для пасхалки
 function eggAnimate(){
   $('.egg img').removeClass('egg-img-a');
 }
@@ -87,7 +87,7 @@ $('.egg').click(function() {
 		};
 	});
 
-
+//Для боовых трех плашек с преимуществами
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	$(".first_adv").click(function() {
 		$('.first_adv').removeClass("zoomInLeft");
@@ -145,13 +145,40 @@ $('.egg').click(function() {
 $('.article_cont').hover(function() {
 	setTimeout(function() {
 				$('.article').removeClass('hidden');
-			}, 100);
-});
+			}, 120);
+}); //Для меню статьи
 
 $('.article_cont').mouseleave(function() {
 	setTimeout(function() {
 		$('.article').addClass('hidden');
-		}, 100);
-});
+		}, 200);
+}); //Для меню статьи
 
+$('.article_cont').click(function() {
+		if ($('.article').hasClass('hidden')){
+			$('.article').removeClass("hidden");
+		} else{
+			$('.article').addClass('hidden');
+		};
+	}); //Для меню статьи
+//----------------------------------------------------------------------------
+$('.article_ship_cont').hover(function() {
+	setTimeout(function() {
+				$('.article_ship').removeClass('hidden');
+			}, 120);
+}); //Для меню о магазине
+
+$('.article_ship_cont').mouseleave(function() {
+	setTimeout(function() {
+		$('.article_ship').addClass('hidden');
+		}, 200);
+}); 
+
+$('.article_ship_cont').click(function() {
+		if ($('.article_ship').hasClass('hidden')){
+			$('.article_ship').removeClass("hidden");
+		} else{
+			$('.article_ship').addClass('hidden');
+		};
+	}); 
 });
