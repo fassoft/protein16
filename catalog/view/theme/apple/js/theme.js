@@ -41,8 +41,8 @@ $('.product-layout > .product-thumb').each(function(e) {
 	});
 });
 
-	/*$('.first_adv').mouseenter(function() {
-		$('.first_adv p').css('color','#fff');
+	/*$('.left-block-first').mouseenter(function() {
+		$('.left-block-first p').css('color','#fff');
 	});*/
 
 	$('.product-thumb h4').css('height', '').equalHeights();
@@ -89,53 +89,53 @@ $('.egg').click(function() {
 
 //Для боовых трех плашек с преимуществами
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	$(".first_adv").click(function() {
-		$('.first_adv').removeClass("zoomInLeft");
-		$('.first_adv + .p-cont').removeClass("zoomOutLeft p-cont-display-ab");
-		$('.first_adv').addClass("animated zoomOutLeft first_adv-display");
-		$('.first_adv + .p-cont').addClass("animated zoomInLeft p-cont-display");
+	$(".left-block-first").click(function() {
+		$('.left-block-first').removeClass("zoomInLeft");
+		$('.left-block-first + .p-cont').removeClass("zoomOutLeft p-cont-display-ab");
+		$('.left-block-first').addClass("animated zoomOutLeft left-block-first-display");
+		$('.left-block-first + .p-cont').addClass("animated zoomInLeft p-cont-display");
 	});
 
-	$(".first_adv + .p-cont").click(function() {
-		$('.first_adv + .p-cont').addClass("animated zoomOutLeft").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+	$(".left-block-first + .p-cont").click(function() {
+		$('.left-block-first + .p-cont').addClass("animated zoomOutLeft").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
 			$(this).addClass("p-cont-display-ab"));
-		$('.first_adv + .p-cont').removeClass("zoomInLeft");
-		$('.first_adv').removeClass("zoomOutLeft first_adv-display");
-		$('.first_adv').addClass("zoomInLeft");
+		$('.left-block-first + .p-cont').removeClass("zoomInLeft");
+		$('.left-block-first').removeClass("zoomOutLeft left-block-first-display");
+		$('.left-block-first').addClass("zoomInLeft");
 	});
 
 //____________________________________________
 
-	$(".second_adv").click(function() {
-		$('.second_adv').removeClass("zoomInLeft");
-		$('.second_adv + .p-cont').removeClass("zoomOutLeft p-cont-display-ab");
-		$('.second_adv').addClass("animated zoomOutLeft first_adv-display");
-		$('.second_adv + .p-cont').addClass("animated zoomInLeft p-cont-display");
+	$(".left-block-second").click(function() {
+		$('.left-block-second').removeClass("zoomInLeft");
+		$('.left-block-second + .p-cont').removeClass("zoomOutLeft p-cont-display-ab");
+		$('.left-block-second').addClass("animated zoomOutLeft left-block-first-display");
+		$('.left-block-second + .p-cont').addClass("animated zoomInLeft p-cont-display");
 	});
 
-	$(".second_adv + .p-cont").click(function() {
-		$('.second_adv + .p-cont').addClass("animated zoomOutLeft").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+	$(".left-block-second + .p-cont").click(function() {
+		$('.left-block-second + .p-cont').addClass("animated zoomOutLeft").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
 			$(this).addClass("p-cont-display-ab"));
-		$('.second_adv + .p-cont').removeClass("zoomInLeft");
-		$('.second_adv').removeClass("zoomOutLeft first_adv-display");
-		$('.second_adv').addClass("zoomInLeft");
+		$('.left-block-second + .p-cont').removeClass("zoomInLeft");
+		$('.left-block-second').removeClass("zoomOutLeft left-block-first-display");
+		$('.left-block-second').addClass("zoomInLeft");
 	});
 
 //_____________________________________________
 
-	$(".third_adv").click(function() {
-		$('.third_adv').removeClass("zoomInLeft");
-		$('.third_adv + .p-cont').removeClass("zoomOutLeft p-cont-display-ab");
-		$('.third_adv').addClass("animated zoomOutLeft first_adv-display");
-		$('.third_adv + .p-cont').addClass("animated zoomInLeft p-cont-display");
+	$(".left-block-third").click(function() {
+		$('.left-block-third').removeClass("zoomInLeft");
+		$('.left-block-third + .p-cont').removeClass("zoomOutLeft p-cont-display-ab");
+		$('.left-block-third').addClass("animated zoomOutLeft left-block-first-display");
+		$('.left-block-third + .p-cont').addClass("animated zoomInLeft p-cont-display");
 	});
 
-	$(".third_adv + .p-cont").click(function() {
-		$('.third_adv + .p-cont').addClass("animated zoomOutLeft").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+	$(".left-block-third + .p-cont").click(function() {
+		$('.left-block-third + .p-cont').addClass("animated zoomOutLeft").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
 			$(this).addClass("p-cont-display-ab"));
-		$('.third_adv + .p-cont').removeClass("zoomInLeft");
-		$('.third_adv').removeClass("zoomOutLeft first_adv-display");
-		$('.third_adv').addClass("zoomInLeft");
+		$('.left-block-third + .p-cont').removeClass("zoomInLeft");
+		$('.left-block-third').removeClass("zoomOutLeft left-block-first-display");
+		$('.left-block-third').addClass("zoomInLeft");
 	});
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -145,40 +145,53 @@ $('.egg').click(function() {
 $('.article_cont').hover(function() {
 	setTimeout(function() {
 				$('.article').removeClass('hidden');
-			}, 120);
+			}, 100);
 }); //Для меню статьи
 
 $('.article_cont').mouseleave(function() {
 	setTimeout(function() {
 		$('.article').addClass('hidden');
-		}, 200);
+		}, 100);
 }); //Для меню статьи
 
-$('.article_cont').click(function() {
-		if ($('.article').hasClass('hidden')){
-			$('.article').removeClass("hidden");
-		} else{
-			$('.article').addClass('hidden');
-		};
-	}); //Для меню статьи
 //----------------------------------------------------------------------------
 $('.article_ship_cont').hover(function() {
 	setTimeout(function() {
 				$('.article_ship').removeClass('hidden');
-			}, 120);
+			}, 100);
 }); //Для меню о магазине
 
 $('.article_ship_cont').mouseleave(function() {
 	setTimeout(function() {
 		$('.article_ship').addClass('hidden');
-		}, 200);
+		}, 100);
 }); 
 
-$('.article_ship_cont').click(function() {
+if ($(window).width() <= '768'){
+	articleContClick();
+	articleShipContClick()
+};
+
+function articleContClick(){
+	$('.article_cont').click(function() {
+		if ($('.article').hasClass('hidden')){
+			$('.article').removeClass("hidden");
+		} else{
+			$('.article').addClass('hidden');
+		};
+	});
+};
+
+function articleShipContClick(){
+	$('.article_ship_cont').click(function() {
 		if ($('.article_ship').hasClass('hidden')){
 			$('.article_ship').removeClass("hidden");
 		} else{
 			$('.article_ship').addClass('hidden');
 		};
-	}); 
+	});
+};
+
+
+
 });
