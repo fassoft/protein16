@@ -814,5 +814,30 @@ ul.pagination
 address
 	margin-bottom: 0
 
+.btn, 
+	border-radius: 0
+.btn-primary
+	background-color: $accent
+	border: none
+	transition: all .15s ease
+	&:hover
+		background-color: $accent2
+.btn-info, .btn-danger
+	background-color: lighten($grey, 10%)
+	border: none
+	transition: all .15s ease
+	&:hover
+		background-color: $accent2
+
+.well
+	background-color: #fff
+
+label.require-field
+	color: $accent
+
+label.non-require-field
+	color: lighten($grey, 15%)
+
+
 @import "media" 
 
